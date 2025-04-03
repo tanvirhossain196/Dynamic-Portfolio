@@ -2,50 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "app.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/get-started",
-      "dest": "/get-started"
-    },
-    {
-      "src": "/login",
-      "dest": "/login"
-    },
-    {
-      "src": "/signup",
-      "dest": "/signup"
-    },
-    {
-      "src": "/build",
-      "dest": "/build"
-    },
-    {
-      "src": "/templet2",
-      "dest": "/templet2"
-    },
-    {
-      "src": "/templet3",
-      "dest": "/templet3"
-    },
-    {
-      "src": "/forgetpass",
-      "dest": "/forgetpass"
-    },
-    {
-      "src": "/about",
-      "dest": "/about"
-    },
-    {
-      "src": "/planpricing",
-      "dest": "/planpricing"
-    },
-    {
-      "src": "/home",
-      "dest": "/home"
+      "src": "/(.*)",
+      "dest": "app.js"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
